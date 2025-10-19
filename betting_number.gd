@@ -1,7 +1,6 @@
 extends Label
 
-@onready var choose_bid = get_tree().get_nodes_in_group("choose_bid")[0]
-@export var coins_left: int = 10
+@export var coins_left: int
 
 var num: int = 0
 
@@ -10,7 +9,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	text = str(num)
-	coins_left = choose_bid.coins_left
+	coins_left = GameManager.p1_coins_left
 
 func increment():
 	num += 1

@@ -1,8 +1,8 @@
 extends Control
 
-var coins_left: int = 10
-
+#the number shown on screen
 @onready var betting_number: Label = $BettingNumber
+#the number of coins left for p1
 @onready var coin_counter: Label = $CoinCount
 
 func _ready() -> void:
@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	coin_counter.text = "Coins left: " + str(coins_left)
+	coin_counter.text = "Coins left: " + str(GameManager.p1_coins_left)
 	pass
 
 func _on_up_pressed() -> void:
@@ -19,7 +19,4 @@ func _on_up_pressed() -> void:
 
 func _on_ok_pressed() -> void:
 	#switch to show results of the bidding
-	var next_scene = preload("res://scripts+scenes/ttt/bid_result.tscn")
-	var player1_bid = next_scene.get_node("Player1").get_node("BettingNumber")
-	player1_bid.text = betting_number.text
-	get_tree().current_scene = next_scene
+	get_tree().change_scene_to_file("res://scripts+scenes/ttt/bid_result.tscn")

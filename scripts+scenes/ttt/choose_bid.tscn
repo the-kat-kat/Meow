@@ -5,7 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://he5q8pyshfjg" path="res://styles/white_round_box.tres" id="3_jfoje"]
 [ext_resource type="Script" uid="uid://b650q5s22g6ox" path="res://betting_number.gd" id="4_xosn5"]
 
-[node name="ChooseBid" type="Control" groups=["choose_bid"]]
+[node name="ChooseBid" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
