@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://eog7lo4xctsf"]
+
+[ext_resource type="FontFile" uid="uid://bvcu4crixhcdc" path="res://fonts/AdabelleHandwriting-Regular.ttf" id="1_jiint"]
+[ext_resource type="StyleBox" uid="uid://he5q8pyshfjg" path="res://styles/white_round_box.tres" id="2_fjc5a"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.907266, 0.810024, 0.984874, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -212.0
+offset_right = 181.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_jiint")
+theme_override_font_sizes/font_size = 50
+text = "Bidding Tic Tac Toe"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.318
+anchor_right = 0.744
+anchor_bottom = 0.577
+offset_left = 0.440002
+offset_right = -0.0880127
+offset_bottom = 0.103973
+
+[node name="Start!" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jiint")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_fjc5a")
+text = "Play"
+
+[node name="How to Play" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jiint")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_fjc5a")
+text = "How to play?"
