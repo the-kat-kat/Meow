@@ -50,6 +50,7 @@ anchor_bottom = 0.577
 offset_left = 0.440002
 offset_right = -0.0880127
 offset_bottom = 0.103973
+theme_override_constants/separation = 20
 
 [node name="Start!" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)

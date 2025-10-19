@@ -1,0 +1,125 @@
+[gd_scene load_steps=4 format=3 uid="uid://bco1jfh2nrtpg"]
+
+[ext_resource type="FontFile" uid="uid://bvcu4crixhcdc" path="res://fonts/AdabelleHandwriting-Regular.ttf" id="1_u30pl"]
+[ext_resource type="StyleBox" uid="uid://he5q8pyshfjg" path="res://styles/white_round_box.tres" id="2_0av7f"]
+[ext_resource type="Script" uid="uid://b650q5s22g6ox" path="res://betting_number.gd" id="3_jqe1d"]
+
+[node name="BidResult" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.671464, 0.624267, 1, 1)
+
+[node name="Player1" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -555.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BettingNumber" type="Label" parent="Player1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -136.0
+offset_right = 108.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_u30pl")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_0av7f")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Label" parent="Player1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.352
+anchor_top = 0.173
+anchor_right = 0.657
+anchor_bottom = 0.261
+offset_left = -106.504
+offset_top = 4.896
+offset_right = 86.296
+offset_bottom = 58.376
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_u30pl")
+theme_override_font_sizes/font_size = 50
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="Player2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 554.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BettingNumber" type="Label" parent="Player2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -136.0
+offset_right = 108.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_u30pl")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_0av7f")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_jqe1d")
+
+[node name="Text" type="Label" parent="Player2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.352
+anchor_top = 0.173
+anchor_right = 0.657
+anchor_bottom = 0.261
+offset_left = -106.504
+offset_top = 4.896
+offset_right = 86.296
+offset_bottom = 58.376
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_u30pl")
+theme_override_font_sizes/font_size = 50
+text = "Player 2"
+horizontal_alignment = 1
