@@ -3,15 +3,12 @@ extends Control
 #the number shown on screen
 @onready var betting_number: Label = $BettingNumber
 #the number of coins left for p1
-@onready var coin_counter: Label = $CoinCount
+@onready var p1_coin_counter: Label = $P1CoinCount
+@onready var p2_coin_counter: Label = $P2CoinCount
 
 func _ready() -> void:
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	coin_counter.text = "Coins left: " + str(GameManager.p1_coins_left)
-	pass
+	p1_coin_counter.text = "P1 Coins left: " + str(GameManager.p2_coins_left)
+	p2_coin_counter.text = "P2 Coins left: " + str(GameManager.p1_coins_left)
 
 func _on_up_pressed() -> void:
 	betting_number.increment()
@@ -20,5 +17,5 @@ func _on_up_pressed() -> void:
 func _on_ok_pressed() -> void:
 	#switch to show results of the bidding
 	GameManager.p1_current_bid = int(betting_number.text)
-	GameManager.p1_coins_left -= int(betting_number.text)
 	get_tree().change_scene_to_file("res://scripts+scenes/ttt/bid_result.tscn")
+	#set this so that p2 move can be gotten when grid_container is initialized

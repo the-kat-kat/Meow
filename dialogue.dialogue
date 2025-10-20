@@ -1,20 +1,14 @@
 ~ start
-Alex: (Placing an 'X' in the center square) Alright, game on. The center is mine. Classic power move.
-Ben: (Smiling, places an 'O' in the top left corner) Bold, Alex, bold. But predictable. I'll take the corner. Gives me options.
-Alex: (Frowns, taps his pen on the napkin) Options, schemoptions. I will block your top edge.
-- (Place an "X" in the top right corner) You've gotta defend.
-Ben: (Leans back, takes a sip of his coffee) Do I? (Place a "O" in the bottom left corner). 
-- If you don't take the bottom right. I win.
-Alex: Tdkdkd  dkkdkkdkkd
-Ben: DDD dkdkdkdkd
-Alex: DDDD
-Ben: dkdkdkdkd
-Alex: e9ru8er9e8re
-Ben: cmmvbvmvmvmvmv
-Alex: dkdkdksoskisjks
-Ben: AAAAA
-Alex: dkdkdkdkd
-Ben: Dtkdkdkd di93939e n39393939
-Alex: 59609650ldjdjd 3838
-
+Anna: Do you thinkg Tic-Tac-Toe is kind of boring?
+Banana: I mean, a lil bit
+Anna: Well, me too! Don't worry though, we aren't just going to play Tic-Tac-Toe today :>
+Anna: We will be playing biding Tic-Tac-Toe
+Banana: What's bidding Tic-Tac-Toe?
+Anna: We each start off with 10 stars. First, we will bid our stars. 
+The person with the highest bid will get to place an X or O on the tic-tac-toe board. I can be O and you can be X
+Ana: The tic-tac-toe board works as normal! Whoever gets the first row, column, or diagonal
+Banana: But what happens if we bid the same amount?
+Ana: Oh, I almost forgot about that
+Ana: If that happens, then you can just place an X. I'll be nice about it :> 
+do go_back()
 => END

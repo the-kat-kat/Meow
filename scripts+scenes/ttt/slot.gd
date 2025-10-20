@@ -22,3 +22,4 @@ func add_to_board(type: int):
 	else:
 		add_child(o_image.instantiate())
 	GameManager.ttt_board[row][col] = type
+	GameManager.placed_xo = true

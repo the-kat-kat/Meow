@@ -3,8 +3,11 @@ extends Control
 @onready var x_image: Control = $CanvasLayer/X_image
 @onready var o_image: Control = $CanvasLayer/O_image
 
+@onready var winner: Control = $End/Winner
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$End.visible = false
 	if GameManager.who_won == 1:
 		x_image.modulate.a = 1.0
 		o_image.modulate.a = 0.2
@@ -14,4 +17,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if GameManager.someone_won:
+		$End.visible = true
+		winner.visible = true
+		if GameManager.who_won == 1:
+			winner.text = "You are the WINNER yayayyyy"
+		else:
+			winner.text = "You lost :'("
+		

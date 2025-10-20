@@ -4,10 +4,10 @@
 
 [node name="O_image" type="TextureRect"]
 custom_minimum_size = Vector2(100, 100)
-anchors_preset = -1
-anchor_right = 3.875
-anchor_bottom = 3.275
-offset_right = -2.00002
-offset_bottom = 1.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_eayxb")
 expand_mode = 1

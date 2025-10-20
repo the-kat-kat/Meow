@@ -23,6 +23,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			show_bid_winner()
 		elif proceed_index == 1:
 			proceed_index = 2
+			if GameManager.who_won == 2:
+				GameManager.getting_p2_move = true
 			get_tree().change_scene_to_file("res://scripts+scenes/ttt/ttt_main.tscn")
 			
 func show_bid_winner():
