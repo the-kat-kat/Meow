@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk4oblnlm2ki8"]
+
+[ext_resource type="Script" uid="uid://urvmutid4v2i" path="res://win.gd" id="1_cvohy"]
+[ext_resource type="Resource" uid="uid://cuud4n3gbxknm" path="res://dialogue.dialogue" id="2_0rli4"]
+[ext_resource type="Texture2D" uid="uid://b56x3j854mwth" path="res://art/filler/cat Background Removed.png" id="3_73yrx"]
+[ext_resource type="Texture2D" uid="uid://dyg7v0nku66f4" path="res://art/filler/bunnycool Background Removed.png" id="4_6d2vk"]
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cvohy")
+dialogue = ExtResource("2_0rli4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.907266, 0.810024, 0.984874, 1)
+
+[node name="Ana" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_top = 76.0
+offset_right = 356.0
+offset_bottom = 416.0
+texture = ExtResource("3_73yrx")
+flip_h = true
+
+[node name="Banana" type="TextureRect" parent="."]
+offset_left = 751.0
+offset_top = 78.0
+offset_right = 1106.0
+offset_bottom = 409.0
+texture = ExtResource("4_6d2vk")
+expand_mode = 2
+stretch_mode = 4

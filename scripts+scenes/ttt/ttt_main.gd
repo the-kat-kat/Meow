@@ -25,3 +25,5 @@ func _process(delta: float) -> void:
 		else:
 			winner.text = "You lost :'("
 		
+func go_back():
+	get_tree().change_scene_to_file("res://scripts+scenes/main_menu/main_menu.tscn")

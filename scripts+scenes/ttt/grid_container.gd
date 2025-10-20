@@ -11,7 +11,6 @@ func _ready() -> void:
 			new_slot.row = i
 			new_slot.col = j
 			if GameManager.ttt_board[i][j] != 0:
-				print("there is smthing at ", i, j)
 				new_slot.add_to_board(GameManager.ttt_board[i][j])
 			new_slot.connect("pressed", Callable(new_slot, "_on_pressed"))
 			

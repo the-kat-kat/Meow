@@ -5,10 +5,24 @@ Anna: Well, me too! Don't worry though, we aren't just going to play Tic-Tac-Toe
 Anna: We will be playing biding Tic-Tac-Toe
 Banana: What's bidding Tic-Tac-Toe?
 Anna: We each start off with 10 stars. First, we will bid our stars. 
-The person with the highest bid will get to place an X or O on the tic-tac-toe board. I can be O and you can be X
-Ana: The tic-tac-toe board works as normal! Whoever gets the first row, column, or diagonal
+Anna:The person with the highest bid will get to place an X or O on the tic-tac-toe board. I can be O and you can be X
+Anna: The tic-tac-toe board works as normal! Whoever gets the first row, column, or diagonal
 Banana: But what happens if we bid the same amount?
-Ana: Oh, I almost forgot about that
-Ana: If that happens, then you can just place an X. I'll be nice about it :> 
+Anna: Oh, I almost forgot about that
+Anna: If that happens, then you can just place an X. I'll be nice about it :> 
+do go_back()
+=> END
+
+~ you_won
+Anna: Wow I can't believe you won
+Banana: :>
+Anna: Wanna play another round? >:) I will win this time
+do go_back()
+=> END
+
+~you_lost
+Anna: Wow I'm just built different
+Banana: :') 
+Anna: Wanna play another round? >:) I will win this time again and take more of your money
 do go_back()
 => END
