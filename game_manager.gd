@@ -5,8 +5,8 @@ extends Node2D
 var bids_done: int = 0
 var rows = 3
 var cols = 3
-var ttt_board = [] #0 for none, 1 for p1, 2 for p2
-var who_won: int = 0 #1 for p1, 2 for p2
+var ttt_board = [] #0 for none, 1 for p1 x, 2 for p2 o
+var who_won: int = 0 #1 for p1, 2 for p2, who won the bet
 
 #player 1 (you)
 var p1_coins_left: int = 10
@@ -15,7 +15,6 @@ var p1_current_bid: int = 0
 #player 2 (computer)
 var p2_coins_left: int = 10
 var p2_current_bid: int = 10
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +33,7 @@ func set_square(row: int, col: int, type: int):
 	
 func get_best_bid() -> int:
 	if p2_coins_left > 0:
+		print("p2 has coints")
 		p2_current_bid = 1
 		get_bid_winner()
 		return 1

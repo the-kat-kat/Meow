@@ -1,6 +1,7 @@
 extends Control
 
 @onready var results_panel: Panel = $Results
+@onready var p1_bid = $Player1/BettingNumber
 @onready var p2_bid = $Player2/BettingNumber
 
 @export var winner_image_scene: PackedScene
@@ -12,7 +13,8 @@ func _ready() -> void:
 	var winner_instance = winner_image_scene.instantiate()
 
 	results_panel.visible = true
-	p2_bid = GameManager.get_best_bid()
+	p1_bid.text = str(GameManager.p1_current_bid)
+	p2_bid.text = str(GameManager.get_best_bid())
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
