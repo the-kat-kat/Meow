@@ -8,4 +8,6 @@ Nathan: Here are some choices.
 - Start again => start
 - End the conversation => END
 Nathan: For more information see the online documentation.
+David: I want to know how to play this game.
+Nathan: It is basically a tic tac toe game.
 => END
