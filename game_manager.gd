@@ -50,3 +50,4 @@ func get_bid_winner():
 		who_won = 1
 	else:
 		who_won = 2
+		
