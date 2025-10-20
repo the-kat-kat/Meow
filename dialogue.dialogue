@@ -10,4 +10,11 @@ Nathan: Here are some choices.
 Nathan: For more information see the online documentation.
 David: I want to know how to play this game.
 Nathan: It is basically a tic tac toe game.
+David: Explain more.
+Nathan: We have a "x" symbol and an "o" symbol. There are 9 squares. On your turn
+- you put your symbol on a square. If your symbols form a straight line, horizontally
+- vertically or diagonally, then you win.
+David: It sounds too easy. Will there always be a winner.
+Nathan: No. Sometimes the game ends in a draw.
+David: Darn. I don't lik that. I want a game with clear winners.
 => END
