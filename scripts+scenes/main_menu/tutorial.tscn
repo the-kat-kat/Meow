@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwfvx557m0ion"]
+
+[ext_resource type="Script" uid="uid://b4gn6eawssb4x" path="res://scripts+scenes/main_menu/tutorial.gd" id="1_cedg7"]
+[ext_resource type="Resource" uid="uid://cuud4n3gbxknm" path="res://dialogue.dialogue" id="2_vt1tf"]
+[ext_resource type="Texture2D" uid="uid://b56x3j854mwth" path="res://art/filler/cat Background Removed.png" id="3_585qc"]
+[ext_resource type="Texture2D" uid="uid://dyg7v0nku66f4" path="res://art/filler/bunnycool Background Removed.png" id="4_c31re"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cedg7")
+dialogue = ExtResource("2_vt1tf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.907266, 0.810024, 0.984874, 1)
+
+[node name="Ana" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 76.0
+offset_right = 356.0
+offset_bottom = 416.0
+texture = ExtResource("3_585qc")
+flip_h = true
+
+[node name="Banana" type="TextureRect" parent="."]
+offset_left = 751.0
+offset_top = 78.0
+offset_right = 1106.0
+offset_bottom = 409.0
+texture = ExtResource("4_c31re")
+expand_mode = 2
+stretch_mode = 4

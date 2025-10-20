@@ -7,4 +7,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		DialogueManager.show_dialogue_balloon(dialogue)
 
 func go_back():
-	get_tree().change_scene_to_file("res://scripts+scenes/main_menu/main_menu")
+	get_tree().change_scene_to_file("res://scripts+scenes/main_menu/main_menu.tcsn")

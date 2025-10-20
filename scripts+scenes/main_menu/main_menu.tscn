@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://eog7lo4xctsf"]
+[gd_scene load_steps=4 format=3 uid="uid://eog7lo4xctsf"]
 
+[ext_resource type="Script" uid="uid://dqjugafoggkvv" path="res://scripts+scenes/main_menu/main_menu.gd" id="1_fjc5a"]
 [ext_resource type="FontFile" uid="uid://bvcu4crixhcdc" path="res://fonts/AdabelleHandwriting-Regular.ttf" id="1_jiint"]
 [ext_resource type="StyleBox" uid="uid://he5q8pyshfjg" path="res://styles/white_round_box.tres" id="2_fjc5a"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fjc5a")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -100
@@ -69,3 +71,17 @@ theme_override_fonts/font = ExtResource("1_jiint")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = ExtResource("2_fjc5a")
 text = "How to play?"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jiint")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_fjc5a")
+text = "Settings
+"
+
+[connection signal="pressed" from="VBoxContainer/Start!" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/How to Play" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
