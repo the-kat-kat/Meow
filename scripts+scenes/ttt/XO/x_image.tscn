@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bonrd7mpnonj0"]
+
+[ext_resource type="Texture2D" uid="uid://co144er1qespw" path="res://art/filler/x.jpg" id="1_20oo6"]
+
+[node name="X_image" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 35.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_20oo6")
+expand_mode = 2

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://duomu7dv66x1v"]
+
+[ext_resource type="Texture2D" uid="uid://d5vw3y8b85mx" path="res://art/filler/o.png" id="1_eayxb"]
+
+[node name="O_image" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 3.875
+anchor_bottom = 3.275
+offset_right = -2.00002
+offset_bottom = 1.0
+texture = ExtResource("1_eayxb")
+expand_mode = 1

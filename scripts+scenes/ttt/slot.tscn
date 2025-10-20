@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://bnra5yomyfk7n"]
+[gd_scene load_steps=4 format=3 uid="uid://bnra5yomyfk7n"]
+
+[ext_resource type="Script" uid="uid://bwh5cpopqurl1" path="res://scripts+scenes/ttt/slot.gd" id="1_i2245"]
+[ext_resource type="PackedScene" uid="uid://bonrd7mpnonj0" path="res://scripts+scenes/ttt/XO/x_image.tscn" id="2_8iphh"]
+[ext_resource type="PackedScene" uid="uid://duomu7dv66x1v" path="res://scripts+scenes/ttt/XO/o_image.tscn" id="3_2yfod"]
 
 [node name="Slot" type="Button"]
 custom_minimum_size = Vector2(100, 100)
@@ -7,3 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_i2245")
+x_image = ExtResource("2_8iphh")
+o_image = ExtResource("3_2yfod")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

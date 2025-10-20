@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=3 uid="uid://bogtrqgi2pdwr"]
+
+[ext_resource type="PackedScene" uid="uid://bnra5yomyfk7n" path="res://scripts+scenes/ttt/slot.tscn" id="1_2sy6u"]
+[ext_resource type="Script" uid="uid://dkeshho0q1vjp" path="res://scripts+scenes/ttt/ttt_main.gd" id="1_nbgaj"]
+[ext_resource type="PackedScene" uid="uid://bonrd7mpnonj0" path="res://scripts+scenes/ttt/XO/x_image.tscn" id="3_7bnia"]
+[ext_resource type="PackedScene" uid="uid://duomu7dv66x1v" path="res://scripts+scenes/ttt/XO/o_image.tscn" id="4_rdake"]
+
+[node name="TTTMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nbgaj")
+
+[node name="BG" type="ColorRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.671464, 0.624267, 1, 1)
+
+[node name="Grid" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.283
+anchor_top = 0.114
+anchor_right = 0.717
+anchor_bottom = 0.886
+offset_left = -0.0160217
+offset_top = 0.127998
+offset_right = 0.0159912
+offset_bottom = -0.128052
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="Grid"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -154.0
+offset_right = 154.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Slot" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot2" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot3" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot4" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot5" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot6" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot7" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot8" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="Slot9" parent="Grid/GridContainer" instance=ExtResource("1_2sy6u")]
+layout_mode = 2
+
+[node name="X" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 65.0
+offset_top = 231.0
+offset_right = 151.0
+offset_bottom = 307.0
+
+[node name="X_image" parent="X" instance=ExtResource("3_7bnia")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="O" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 933.0
+offset_top = 197.0
+offset_right = 973.0
+offset_bottom = 237.0
+
+[node name="O_image" parent="O" instance=ExtResource("4_rdake")]
+layout_mode = 0
+anchors_preset = 0

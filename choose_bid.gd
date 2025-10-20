@@ -19,4 +19,6 @@ func _on_up_pressed() -> void:
 
 func _on_ok_pressed() -> void:
 	#switch to show results of the bidding
+	GameManager.p1_current_bid = int(betting_number.text)
+	GameManager.p1_coins_left -= int(betting_number.text)
 	get_tree().change_scene_to_file("res://scripts+scenes/ttt/bid_result.tscn")

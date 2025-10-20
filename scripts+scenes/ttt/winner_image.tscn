@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpds86ejsvxxp"]
+
+[ext_resource type="Texture2D" uid="uid://j1q7dwfxg2rr" path="res://art/filler/girl Background Removed.png" id="1_n8rsy"]
+
+[node name="Winner" type="TextureRect"]
+z_index = 10
+offset_top = 300.0
+offset_right = 300.0
+offset_bottom = 600.0
+texture = ExtResource("1_n8rsy")
+expand_mode = 1
