@@ -8,4 +8,9 @@ Nathan: Here are some choices.
 - Start again => start
 - End the conversation => END
 Nathan: For more information see the online documentation.
+John: Where can I find the documentation.
+Nathan: Google this "Godot"
+John: I tried, nothing came up.
+Nathan: Are you sure?
+
 => END
