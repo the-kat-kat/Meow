@@ -16,6 +16,8 @@ var p1_current_bid: int = 0
 var p2_coins_left: int = 10
 var p2_current_bid: int = 10
 
+var player_bid_history: Array = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(rows):
@@ -32,16 +34,69 @@ func set_square(row: int, col: int, type: int):
 	ttt_board[row][col] = type
 	
 func get_best_bid() -> int:
-	if p2_coins_left > 0:
-		print("p2 has coints")
-		p2_current_bid = 1
-		get_bid_winner()
-		return 1
-	else:
-		p2_current_bid = 0
-		get_bid_winner()
-		return 0
+	var target_square: Vector2 = find_best_square()
+	
+	var estimated_player_bid: int = 0
+	if player_bid_history.size() > 0:
+		var sum = 0
+		for b in player_bid_history:
+			sum += b
+		estimated_player_bid = int(sum / player_bid_history.size())
 		
+	var bid: int = min(estimated_player_bid + 1, p2_coins_left)
+	p2_current_bid = bid
+	
+	ttt_board[target_square.x][target_square.y] = 0 # placeholder, will be set after bid resolution
+	
+	return bid
+	
+func find_best_square() -> Vector2:
+	var sq = find_winning_square(2)
+	if sq != null:
+		return sq
+	sq = find_winning_square(1)
+	if sq != null:
+		return sq
+	if ttt_board[1][1] == 0:
+		return Vector2(1, 1)
+	var corners = [Vector2(0,0), Vector2(0,2), Vector2(2,0), Vector2(2,2)]
+	for c in corners:
+		if ttt_board[c.x][c.y] == 0:
+			return c
+	for i in range(rows):
+		for j in range(cols):
+			if ttt_board[i][j] == 0:
+				return Vector2(i,j)
+	return Vector2(0,0)
+	
+func find_winning_square(player: int) -> Vector2:
+	for i in range(rows):
+		for j in range(cols):
+			if ttt_board[i][j] == 0:
+				ttt_board[i][j] = player
+				if check_winner(player):
+					ttt_board[i][j] = 0
+					return Vector2(i, j)
+			ttt_board[i][j] = 0
+	return Vector2(-1, -1)
+	
+func check_winner(player: int):
+	#check the rwosss
+	for i in range(rows):
+		if ttt_board[i][0] == player && ttt_board[i][1] == player && ttt_board[i][2] == player:
+			return true
+	#cols
+	for j in range(cols):
+		if ttt_board[0][j] == player && ttt_board[1][j] == player && ttt_board [2][j] == player:
+			return true
+		
+	#diagonals
+	if ttt_board[0][0] == player && ttt_board[1][1] == player && ttt_board[2][2] == player:
+		return true
+	if ttt_board[2][0] == player && ttt_board[1][1] == player && ttt_board[0][2] == player:
+		return true
+	return false
+
 #who had the higher bid
 func get_bid_winner():
 	#greater than or EQUAL to

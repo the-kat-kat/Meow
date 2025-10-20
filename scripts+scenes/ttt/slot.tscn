@@ -17,6 +17,7 @@ offset_right = -4.14404
 offset_bottom = 0.103973
 grow_horizontal = 2
 grow_vertical = 2
+text = "hi"
 script = ExtResource("1_i2245")
 x_image = ExtResource("2_8iphh")
 o_image = ExtResource("3_2yfod")

@@ -1,23 +1,42 @@
-[gd_scene load_steps=6 format=3 uid="uid://bogtrqgi2pdwr"]
+[gd_scene load_steps=7 format=3 uid="uid://bogtrqgi2pdwr"]
 
 [ext_resource type="PackedScene" uid="uid://bnra5yomyfk7n" path="res://scripts+scenes/ttt/slot.tscn" id="1_2sy6u"]
 [ext_resource type="Script" uid="uid://dkeshho0q1vjp" path="res://scripts+scenes/ttt/ttt_main.gd" id="1_nbgaj"]
 [ext_resource type="Script" uid="uid://b76etayv3qy7s" path="res://scripts+scenes/ttt/grid_container.gd" id="2_nbgaj"]
 [ext_resource type="PackedScene" uid="uid://bonrd7mpnonj0" path="res://scripts+scenes/ttt/XO/x_image.tscn" id="3_7bnia"]
+[ext_resource type="FontFile" uid="uid://bvcu4crixhcdc" path="res://fonts/AdabelleHandwriting-Regular.ttf" id="4_1jr4m"]
 [ext_resource type="PackedScene" uid="uid://duomu7dv66x1v" path="res://scripts+scenes/ttt/XO/o_image.tscn" id="4_rdake"]
 
 [node name="TTTMain" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
 script = ExtResource("1_nbgaj")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-custom_minimum_size = Vector2(100, 100)
+[node name="Start!" type="Button" parent="."]
+z_index = 100
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.322
+anchor_top = 0.272
+anchor_right = 0.731
+anchor_bottom = 0.574
+offset_left = 0.0559692
+offset_top = -0.256012
+offset_right = -0.112
+offset_bottom = 0.0480042
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1jr4m")
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(100, 100)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -33,24 +52,21 @@ columns = 3
 script = ExtResource("2_nbgaj")
 slot = ExtResource("1_2sy6u")
 
-[node name="BG" type="ColorRect" parent="."]
+[node name="BG" type="ColorRect" parent="CanvasLayer"]
 z_index = -100
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1152.0
+offset_bottom = 648.0
 color = Color(0.671464, 0.624267, 1, 1)
 
-[node name="X" type="Control" parent="."]
+[node name="X" type="Control" parent="CanvasLayer"]
+layout_mode = 3
 anchors_preset = 0
 offset_left = 65.0
 offset_top = 231.0
 offset_right = 151.0
 offset_bottom = 307.0
 
-[node name="X_image" parent="X" instance=ExtResource("3_7bnia")]
+[node name="X_image" parent="CanvasLayer/X" instance=ExtResource("3_7bnia")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -60,15 +76,15 @@ offset_bottom = 129.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="O" type="Control" parent="."]
+[node name="O" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 933.0
 offset_top = 197.0
-offset_right = 973.0
-offset_bottom = 237.0
+offset_right = 1038.0
+offset_bottom = 303.0
 
-[node name="O_image" parent="O" instance=ExtResource("4_rdake")]
+[node name="O_image" parent="CanvasLayer/O" instance=ExtResource("4_rdake")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
