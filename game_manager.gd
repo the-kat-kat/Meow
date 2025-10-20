@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 func set_square(row: int, col: int, type: int):
 	ttt_board[row][col] = type
 	
-func get_best_bid() -> int:
+func get_best_bid() -> int: 
 	var target_square: Vector2 = find_best_square()
 	
 	var estimated_player_bid: int = 0
@@ -46,15 +46,18 @@ func get_best_bid() -> int:
 	var bid: int = min(estimated_player_bid + 1, p2_coins_left)
 	p2_current_bid = bid
 	
-	ttt_board[target_square.x][target_square.y] = 0 # placeholder, will be set after bid resolution
-	
+	ttt_board[target_square.x][target_square.y] = 0
+	print("p2 bid: ", bid)
+	p2_current_bid = bid
 	return bid
 	
 func find_best_square() -> Vector2:
 	var sq = find_winning_square(2)
+	print("sq2", sq)
 	if sq != null:
 		return sq
 	sq = find_winning_square(1)
+	print("sq1", sq)
 	if sq != null:
 		return sq
 	if ttt_board[1][1] == 0:
@@ -84,26 +87,32 @@ func check_winner(player: int):
 	#check the rwosss
 	for i in range(rows):
 		if ttt_board[i][0] == player && ttt_board[i][1] == player && ttt_board[i][2] == player:
+			print("row won", i)
 			return true
 	#cols
 	for j in range(cols):
 		if ttt_board[0][j] == player && ttt_board[1][j] == player && ttt_board [2][j] == player:
+			print ("col won", j)
 			return true
 		
 	#diagonals
 	if ttt_board[0][0] == player && ttt_board[1][1] == player && ttt_board[2][2] == player:
+		print("dialgal1")
 		return true
 	if ttt_board[2][0] == player && ttt_board[1][1] == player && ttt_board[0][2] == player:
+		print("diagonal2")
 		return true
 	return false
 
 #who had the higher bid
 func get_bid_winner():
 	#greater than or EQUAL to
+	print("p1 is: nd p2 is: ", p1_current_bid, p2_current_bid)
 	if p1_current_bid >= p2_current_bid:
 		print("p1")
 		who_won = 1
 	else:
+		print("p2")
 		who_won = 2
 		
 		

@@ -14,7 +14,7 @@ func _ready() -> void:
 
 	results_panel.visible = true
 	p1_bid.text = str(GameManager.p1_current_bid)
-	p2_bid.text = str(GameManager.get_best_bid())
+	p2_bid.text = str(GameManager.get_best_bid()) ##whyyyyyyy
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
@@ -26,6 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_tree().change_scene_to_file("res://scripts+scenes/ttt/ttt_main.tscn")
 			
 func show_bid_winner():
+	GameManager.get_bid_winner()
 	results_panel.visible = false
 	if GameManager.who_won == 1:
 		$Player1.add_child(winner_image_scene.instantiate())

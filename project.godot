@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Meow"
-run/main_scene="uid://bogtrqgi2pdwr"
+run/main_scene="uid://dnq8us454ub37"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

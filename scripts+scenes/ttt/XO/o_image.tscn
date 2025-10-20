@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d5vw3y8b85mx" path="res://art/filler/o.png" id="1_eayxb"]
 
 [node name="O_image" type="TextureRect"]
+custom_minimum_size = Vector2(100, 100)
 anchors_preset = -1
 anchor_right = 3.875
 anchor_bottom = 3.275
