@@ -25,6 +25,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				GameManager.getting_p2_move = true
 			else:
 				GameManager.getting_p2_move = false
+			GameManager.placed_xo = false
 			get_tree().change_scene_to_file("res://scripts+scenes/ttt/ttt_main.tscn")
 			
 func show_bid_winner():

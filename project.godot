@@ -20,6 +20,13 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GameManager="*res://scripts+scenes/ttt/game_manager.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://ctvx7tq4l13ho"
+mouse_cursor/custom_image_hotspot=Vector2(10, 10)
+mouse_cursor/tooltip_position_offset=Vector2(0, -10)
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")

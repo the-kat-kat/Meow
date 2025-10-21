@@ -189,8 +189,12 @@ func get_bid_winner():
 func next_bid():
 	player_bid_history.append(p1_current_bid)
 	bids_done += 1
-	p1_coins_left -= p1_current_bid
-	p2_coins_left -= p2_current_bid
+	if who_won == 1:
+		p1_coins_left -= p1_current_bid
+		p2_coins_left += p1_current_bid
+	else:
+		p2_coins_left -= p2_current_bid
+		p1_coins_left += p2_current_bid
 	placed_xo = false
 	
 	if check_winner(who_won):

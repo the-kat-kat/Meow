@@ -10,7 +10,7 @@ var filled: bool = false
 
 func _on_pressed() -> void:
 	print("pressed", GameManager.who_won)
-	if GameManager.who_won != 1:
+	if GameManager.who_won != 1 or GameManager.placed_xo:
 		return
 	
 	add_to_board(1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bogtrqgi2pdwr"]
+[gd_scene load_steps=9 format=3 uid="uid://bogtrqgi2pdwr"]
 
 [ext_resource type="PackedScene" uid="uid://bnra5yomyfk7n" path="res://scripts+scenes/ttt/slot.tscn" id="1_2sy6u"]
 [ext_resource type="Script" uid="uid://dkeshho0q1vjp" path="res://scripts+scenes/ttt/ttt_main.gd" id="1_nbgaj"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://bvcu4crixhcdc" path="res://fonts/AdabelleHandwriting-Regular.ttf" id="4_1jr4m"]
 [ext_resource type="PackedScene" uid="uid://duomu7dv66x1v" path="res://scripts+scenes/ttt/XO/o_image.tscn" id="4_rdake"]
 [ext_resource type="StyleBox" uid="uid://he5q8pyshfjg" path="res://styles/white_round_box.tres" id="5_qv6ow"]
+[ext_resource type="Texture2D" uid="uid://b8k3l187drlp" path="res://art/filler/star_bg.png" id="8_qv6ow"]
 
 [node name="TTTMain" type="Control"]
 layout_mode = 3
@@ -14,6 +15,16 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 script = ExtResource("1_nbgaj")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_qv6ow")
 
 [node name="GridContainer" type="GridContainer" parent="." groups=["grid_container"]]
 custom_minimum_size = Vector2(100, 100)
@@ -34,22 +45,16 @@ script = ExtResource("2_nbgaj")
 slot = ExtResource("1_2sy6u")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -2
-
-[node name="BG" type="ColorRect" parent="CanvasLayer"]
-z_index = -100
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.671464, 0.624267, 1, 1)
+layer = 0
 
 [node name="X_image" parent="CanvasLayer" instance=ExtResource("3_7bnia")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 65.0
-offset_top = 231.0
-offset_right = 250.0
-offset_bottom = 360.0
+offset_left = 27.0
+offset_top = 196.0
+offset_right = 163.0
+offset_bottom = 325.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -57,10 +62,12 @@ grow_vertical = 1
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 872.0
+offset_left = 986.0
 offset_top = 197.0
-offset_right = 1054.0
+offset_right = 1137.0
 offset_bottom = 345.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="End" type="Panel" parent="."]
 layout_mode = 1
@@ -71,8 +78,8 @@ anchor_right = 0.729
 anchor_bottom = 0.651
 offset_left = 0.35199
 offset_top = 0.103989
-offset_right = 0.191956
-offset_bottom = 0.151978
+offset_right = 0.192017
+offset_bottom = -96.848
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("5_qv6ow")
@@ -85,12 +92,32 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -178.0
-offset_top = -63.5
+offset_top = -63.0
 offset_right = 178.0
-offset_bottom = -6.5
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_1jr4m")
 theme_override_font_sizes/font_size = 50
 text = "Winner:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = 170.0
+offset_right = 292.0
+offset_bottom = 261.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_1jr4m")
+theme_override_font_sizes/font_size = 50
+text = "(Press Space to proceed)"
+horizontal_alignment = 1

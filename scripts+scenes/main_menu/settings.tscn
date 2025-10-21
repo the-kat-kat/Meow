@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d36xcyb3xdejs"]
+[gd_scene load_steps=5 format=3 uid="uid://d36xcyb3xdejs"]
 
 [ext_resource type="Script" uid="uid://h7257jkq7py6" path="res://scripts+scenes/main_menu/settings.gd" id="1_1ph2q"]
 [ext_resource type="StyleBox" uid="uid://he5q8pyshfjg" path="res://styles/white_round_box.tres" id="2_42n0u"]
 [ext_resource type="FontFile" uid="uid://bvcu4crixhcdc" path="res://fonts/AdabelleHandwriting-Regular.ttf" id="3_nfmhh"]
+[ext_resource type="Texture2D" uid="uid://b8k3l187drlp" path="res://art/filler/star_bg.png" id="4_42n0u"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -13,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ph2q")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 z_index = -100
 layout_mode = 1
 anchors_preset = 15
@@ -21,20 +22,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.907266, 0.810024, 0.984874, 1)
+texture = ExtResource("4_42n0u")
 
 [node name="StartingCoins" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.393
-anchor_top = 0.142
-anchor_right = 0.712
-anchor_bottom = 0.245
-offset_left = -118.736
-offset_top = -0.0160065
-offset_right = -119.224
-offset_bottom = 0.23999
+anchor_left = 0.248
+anchor_top = 0.208
+anchor_right = 0.741
+anchor_bottom = 0.443
+offset_left = 0.303986
+offset_top = 0.216003
+offset_right = -105.632
+offset_bottom = -0.0640259
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nfmhh")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("2_42n0u")
 text = "Number of starting coins:"
 horizontal_alignment = 1
@@ -42,10 +45,16 @@ vertical_alignment = 1
 
 [node name="Up" type="Button" parent="StartingCoins"]
 custom_minimum_size = Vector2(0, 40)
-offset_left = 380.0
-offset_top = -19.0
-offset_right = 428.0
-offset_bottom = 31.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.111
+anchor_top = 0.237
+anchor_right = 1.271
+anchor_bottom = 0.822
+offset_left = -17.282
+offset_top = -0.0240021
+offset_right = -0.202026
+offset_bottom = 0.0559998
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_nfmhh")
 theme_override_font_sizes/font_size = 30
@@ -53,7 +62,9 @@ theme_override_styles/normal = ExtResource("2_42n0u")
 text = "^"
 
 [node name="Down" type="Button" parent="StartingCoins"]
+visible = false
 custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
 offset_left = 378.0
 offset_top = 38.0
 offset_right = 422.0
@@ -66,10 +77,11 @@ text = "v"
 
 [node name="Back" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 80)
-offset_left = 495.0
-offset_top = 502.0
-offset_right = 666.0
-offset_bottom = 582.0
+layout_mode = 0
+offset_left = 517.0
+offset_top = 491.0
+offset_right = 688.0
+offset_bottom = 571.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_nfmhh")
 theme_override_font_sizes/font_size = 40

@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://duomu7dv66x1v"]
 
-[ext_resource type="Texture2D" uid="uid://d5vw3y8b85mx" path="res://art/filler/o.png" id="1_eayxb"]
+[ext_resource type="Texture2D" uid="uid://3yt4iggik1nj" path="res://art/filler/oo.png" id="1_eayxb"]
 
 [node name="O_image" type="TextureRect"]
+modulate = Color(0.909804, 0.909804, 0.67451, 1)
 custom_minimum_size = Vector2(100, 100)
 anchors_preset = 15
 anchor_right = 1.0

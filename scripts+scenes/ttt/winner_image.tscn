@@ -1,11 +1,21 @@
 [gd_scene load_steps=2 format=3 uid="uid://dpds86ejsvxxp"]
 
-[ext_resource type="Texture2D" uid="uid://j1q7dwfxg2rr" path="res://art/filler/girl Background Removed.png" id="1_n8rsy"]
+[ext_resource type="Texture2D" uid="uid://cs8p1v1awg7f1" path="res://art/filler/winner.png" id="1_n8rsy"]
 
 [node name="Winner" type="TextureRect"]
 z_index = 10
-offset_top = 300.0
-offset_right = 300.0
-offset_bottom = 600.0
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = 76.0
+offset_right = 94.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_n8rsy")
 expand_mode = 1
+stretch_mode = 5

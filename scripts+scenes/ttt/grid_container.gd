@@ -14,6 +14,8 @@ func _ready() -> void:
 				new_slot.add_to_board(GameManager.ttt_board[i][j])
 			new_slot.connect("pressed", Callable(new_slot, "_on_pressed"))
 			
+	GameManager.placed_xo = false
+	
 	if GameManager.getting_p2_move:
 		GameManager.grid_container = self
 		print("GC", GameManager.grid_container)
